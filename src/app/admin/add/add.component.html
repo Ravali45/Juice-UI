@@ -1,0 +1,30 @@
+
+<button class="btn btn -primary" style="cursor: pointer" (click)="navigate()">Home</button>
+<br>
+<div class="container-fluid">
+<form >
+<div class="row">
+<div class="col-sm-12 col-md-4">
+<div class="form-group">
+<label>Beverage:</label>
+<input  type="text" name="name" [(ngModel)]="name" id='name' class="form-control" required/>
+<div class="shake-tooltip-username" *ngIf="userNameError != ''">{{userNameError}}</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12 col-md-4">
+<div class="form-group">
+<label>Cost:</label>
+<input name="cost" type="text" [(ngModel)]="cost" id='cost' class="form-control" required>
+<div class="shake-tooltip-username" *ngIf="userCostError != ''">{{userCostError}}</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-2">  
+<button type="submit" class="btn btn-primary" (click)='postjuicedetails()' >Submit</button>
+</div>
+</div>
+</form>
+</div>

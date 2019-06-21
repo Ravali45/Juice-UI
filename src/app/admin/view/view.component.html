@@ -1,0 +1,72 @@
+
+<div class="container-fluid"> 
+        <h3>Beverages</h3>
+        <div class="col-sm-12 col-md-6 col-lg-6">         
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Juice Name</th>
+              <th>cost</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let juice of this.alljuices">
+              <td>{{juice.name}}</td>
+              <td>{{juice.cost}}</td>
+              <td (click)="updatejuice(juice)" data-toggle="modal" data-target="#myModal"><a>Update</a></td>
+              <td (click)='delete(juice)'><a>Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+    </div>
+
+    <!-- modals -->
+    <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">ORDER SUMMARY</h4>
+                </div>
+                <div class="modal-body">
+                        <div class="container-fluid">
+                        <form >
+                                
+                                <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                <label>Beverage:</label>
+                                <input  type="text" name="name" [(ngModel)]="this.name" class="form-control" required/>
+                                <div class="shake-tooltip-username" *ngIf="userNameError != ''">{{userNameError}}</div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                <div class="form-group">
+                                <label>Cost:</label>
+                                <input name="cost" type="text" [(ngModel)]="this.cost" class="form-control" required/>
+                                <div class="shake-tooltip-username" *ngIf="userCostError != ''">{{userCostError}}</div>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="col-md-2">  
+                                <button type="submit" class="btn btn-primary"  (click)='postjuicedetails()'>Submit</button>
+                                </div>
+                                </div>
+                                </form>
+                                </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>

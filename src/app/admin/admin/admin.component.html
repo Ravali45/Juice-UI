@@ -1,0 +1,96 @@
+
+<button class="btn btn -primary" style="cursor: pointer" (click)="navigate()">Home</button>
+
+<button class="btn btn -primary" style="cursor: pointer" (click)="navigateview()">View</button>
+
+<button class="btn btn -primary" style="cursor: pointer" (click)="navigateadd()">Add</button>
+
+<div class="form-group">
+    <div  class="col-md-2">
+        <select class="form-control" [(ngModel)]="this.selectedoption" name="selectedoption">
+        <option>All</option>
+        <option  id="opt" *ngFor="let juice of this.juicedetails">{{juice.name}}</option>
+        </select>
+    </div>
+    <div class="col-md-2">
+        <input type="date" name="bday" [(ngModel)]="this.fromdate" class="form-control">
+        <!-- <input type="date" name="bday">
+        <input type="submit"> -->
+    </div>
+    <div class="col-md-2">
+        <input type="date" name="bday" [(ngModel)]="this.todate" class="form-control">
+    </div>
+    <div class="col-md-2">
+            <button type="submit" (click)="search()" class="btn btn-primary">Search</button>
+    </div>
+</div>
+
+<!-- <div *ngFor="let obj of this.searchedetails">
+<app-search [admin]="obj"></app-search>
+</div> -->
+<!-- display juice details between dates -->
+ <div class="container-fluid" id="notall" *ngIf="this.count>0 && this.selectedoption!='All'">
+    <div class="col-lg-12">
+    <h3 style="text-align: center;">Order Summery</h3>
+    <h4>Beverage Name : {{this.selectedoption}}</h4>
+   
+    </div>
+    <table class="table" >
+        <thead>
+            <tr>
+            <th>Date</th>
+            <th>Quantity</th>
+            <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let juice of this.finalsearch">
+          <tr>
+            <td class="first">{{juice.date}}</td>
+            <td class="second">{{juice.quantity}}</td>
+            <td class="third">{{juice.cost}}</td>
+          </tr>
+        </tbody>
+        <h3>Total</h3>
+        <div *ngFor="let juice of this.allbever">
+                
+                  <div class="second">TOTAL QUANTITY : {{juice.TotalQuantity}}</div>
+                  <div class="third">TOTAL COST : {{juice.TotalCost}}</div>
+                
+            </div>
+      </table>
+</div> 
+<div class="container-fluid" id="all" *ngIf="this.count>0 && this.selectedoption=='All'">
+        <div class="col-lg-12">
+        <h3 style="text-align: center;">Order Summery</h3>
+       
+        </div>
+        <table class="table" >
+            <thead>
+                <tr>
+                <th>Beverge name</th>
+                <th>Quantity</th>
+                <th>Cost</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let juice of this.serachdel">
+            <div><b>Date:{{juice.date}}</b></div>
+
+              <tr *ngFor="let juices of juice['bill']">
+                <td class="first">{{juices.name}}</td>
+                <td class="second">{{juices.quantity}}</td>
+                <td class="third">{{juices.cost}}</td>
+              </tr>
+            </tbody>
+            <h3>Total</h3>
+            
+                    <tbody *ngFor="let juice of this.allbever">
+                    <tr>
+                            <td class="first">{{juice.name}}</td>
+                            <td class="second">{{juice.quantity}}</td>
+                            <td class="third">{{juice.cost}}</td>
+                    </tr>
+                    </tbody>
+                    
+                
+          </table>
+    </div>

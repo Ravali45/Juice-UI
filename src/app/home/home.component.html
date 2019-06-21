@@ -1,0 +1,23 @@
+<button [routerLink]="['/admin']">ADMIN</button>
+<button [routerLink]="['/staff']">staff</button>
+
+<div class="container-fluid"> 
+    <h3>Beverages</h3>
+    <div class="col-sm-12 col-md-6 col-lg-6">         
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Juice Name</th>
+          <th>cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let juice of this.alljuices">
+          <td>{{juice.name}}</td>
+          <td>{{juice.cost}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
