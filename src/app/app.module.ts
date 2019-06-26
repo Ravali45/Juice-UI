@@ -7,13 +7,15 @@ import { AppRoutingModule } from './/app-routing.module';
 import {GlobalService} from './global.service';
 import {HttpModule} from '@angular/http';
 import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent 
+    LoginComponent,
+    HeaderComponent 
   ],
   imports: [
     BrowserModule,
