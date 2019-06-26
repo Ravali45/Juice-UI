@@ -29,7 +29,8 @@
 <app-search [admin]="obj"></app-search>
 </div> -->
 <!-- display juice details between dates -->
- <div class="container-fluid" id="notall" *ngIf="this.count>0 && this.selectedoption!='All'">
+ <div class="container-fluid" id="notall" *ngIf="this.paropt!=-1 && this.paropt>0 ">
+
     <div class="col-lg-12">
     <h3 style="text-align: center;">Order Summery</h3>
     <h4>Beverage Name : {{this.selectedoption}}</h4>
@@ -59,7 +60,8 @@
             </div>
       </table>
 </div> 
-<div class="container-fluid" id="all" *ngIf="this.count>0 && this.selectedoption=='All'">
+
+<div class="container-fluid" id="all" *ngIf="this.allopt!=-1 && this.allopt>0">
         <div class="col-lg-12">
         <h3 style="text-align: center;">Order Summery</h3>
        

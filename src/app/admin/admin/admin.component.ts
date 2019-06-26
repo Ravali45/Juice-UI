@@ -10,6 +10,8 @@ import { Http } from '@angular/http';
 export class AdminComponent implements OnInit {
   cost:number=0;
   all:any;
+  allopt:number=-1;
+  paropt:number=-1;
   count:number=0;
   name: string;
   serachdel=[];
@@ -59,6 +61,8 @@ export class AdminComponent implements OnInit {
     this.routes.navigate(['admin/add']);
   }
   search() {
+    this.allopt=-1;
+    this.paropt=-1;
     this.serachdel=[];
     this.finalsearch = [];
     this.allbever=[];
@@ -78,10 +82,11 @@ export class AdminComponent implements OnInit {
         if(this.searchedetails.length==0)
         {
             this.count=0;
+            this.allopt=0;
 
         }
         for (let i = 0; i < this.searchedetails.length; i++) {
-
+             this.allopt=this.allopt+1;
           for (let k = i + 1; k < this.searchedetails.length; k++) {
             this.count=this.count+1;
 
@@ -163,12 +168,17 @@ export class AdminComponent implements OnInit {
     }
     else {
       this.flag=true;
-      // document.getElementById("all").style.display = "block";
+      if(this.searchedetails.length==0)
+      {
+          this.count=0;
+          this.paropt=0;
+      }      // document.getElementById("all").style.display = "block";
       this.global.findbill(this.fdate, this.tdate, this.selectedoption).subscribe((res) => {
         // document.getElementById("all").style.display = "block";
         this.searchedetails = res.json();
         //console.log(this.searchedetails);
         for (let i = 0; i < this.searchedetails.length; i++) {
+          this.paropt=this.paropt+1;
           this.dateobj = this.searchedetails[i]["date"]
 
           //console.log(this.searchedetails[i]["bill"]);
