@@ -2,11 +2,23 @@ body {
     margin:0;
     padding: 0;
     font-family: 'Roboto', serif;
+    z-index: 99;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    background-position: top center !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    font-family: 'Satisfy', cursive;
  }
  
  #logo { 
    float: left;
    display: inline-block;
+   margin-top: 5px;
+   height: 60px;
+   width: 72px;
+   margin-bottom: 5px;
  }
  #main-header{
     position: relative;
@@ -31,9 +43,8 @@ body {
  } */
  
  #nav {
-     background-color: orange;  /*turns nav bar white*/
+     background-color: #15570a;
      color: white;
-
      width: 100%;
      max-width: 100%;
      padding-right: 30px;
@@ -54,14 +65,25 @@ body {
  
   .nav > li a {                                               
       text-decoration: none;
-      color: blue;
-      font-size: 14px;
-      padding: 5px 0px 5px 0px
+      color: white;
+      font-size: 20px;
+      text-shadow: 1px 0 0 bisque;
+      cursor: pointer
+      /* padding: 5px 0px 5px 0px */
+  }
+  .nav>li>a:focus ,.nav>li>a:hover {
+    text-decoration: none;
+      color: white;
+      font-size: 20px;
+      /* text-shadow: 1px 0 0 bisque; */
+      cursor: pointer;
+      text-shadow: none;
   }
  
   .nav > li > a:hover {
       color: black;
   }
+ 
   @media handheld and (max-width:768px),
       screen and (max-width: 768px) {
   #logo{
