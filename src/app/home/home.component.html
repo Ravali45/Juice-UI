@@ -1,23 +1,34 @@
-<button [routerLink]="['/admin']">ADMIN</button>
-<button [routerLink]="['/staff']">staff</button>
+<div class="div-top">
+  <button class="button-orange padding-button" [routerLink]="['/admin']">Admin</button>
+  <button class="button-orange padding-button" [routerLink]="['/staff']">Staff</button>
+</div>
 
-<div class="container-fluid"> 
-    <h3>Beverages</h3>
-    <div class="col-sm-12 col-md-6 col-lg-6">         
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Juice Name</th>
-          <th>cost</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let juice of this.alljuices">
-          <td>{{juice.name}}</td>
-          <td>{{juice.cost}}</td>
-        </tr>
-      </tbody>
-    </table>
+<!-- <button [routerLink]="['/admin']">ADMIN</button>
+<button [routerLink]="['/staff']">staff</button> -->
+
+<div class="container-fluid content-center"> 
+  <div class="col-lg-3"></div>
+  <div class="col-lg-8 col-md-12">
+    <div class="main-page-h2">
+      <span class="heading">Juice Bar</span>
     </div>
+      <div class="col-sm-12 col-md-6 col-lg-10">         
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Juice Name</th>
+            <th>cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let juice of this.alljuices">
+            <td>{{juice.name}}</td>
+            <td class="cost-color">{{juice.cost}}</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div class="co-lg-2"></div>
   </div>
 

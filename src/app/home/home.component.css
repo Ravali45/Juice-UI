@@ -1,0 +1,62 @@
+.div-top{
+    background-image: url("/src/assets/img/banner-fruit.jpg");
+    max-height: 150px;
+    height: 150px;
+    text-align: center;
+}
+.button-orange{
+    color: #ffffff!important;
+    border-width: 3px!important;
+    border-color: #ed8b00;
+    border-radius: 10px;
+    background-color: #ed8b00;
+    font-size: 18px;
+    font-family: 'Satisfy', cursive;
+}
+.padding-button{
+    padding: 3px;
+    margin-top:3%;
+    margin-top: 4%;
+    /* margin-left: 3%; */
+    margin-left: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.heading{
+    position: relative;
+    z-index: 1;
+    color: #15570a;
+    font-size: 24px;
+    font-weight: 800;
+}
+.container-fluid{
+    align-items: center;
+    background-image: url("/src/assets/img/nature.jpg");
+    font-family: 'Satisfy', cursive;
+}
+.main-page-h2:before {
+    border-top: 2px solid #dfdfdf;
+    content: "";
+    position: absolute;
+    top: 6%;
+    left: 20%;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    z-index: -1;
+}
+.main-page-h2{
+    margin-bottom: 2.75%;
+    margin-top: 3%;
+}
+.table>thead>tr>th{
+    font-weight: bold;
+    font-size: 20px;
+}
+.table>tbody>tr>td{
+    font-size: 19px;
+    color: #424242;
+}
+.cost-color{
+    color: #d14200!important;
+}
