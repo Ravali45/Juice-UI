@@ -54,6 +54,7 @@ export class ViewComponent implements OnInit {
       this.userNameError = 'Please provide juice name';
       setTimeout(() => {
           this.userNameError = '';
+          
       }, 2000);
     } 
     else if ( this.cost === undefined || this.cost === null) {

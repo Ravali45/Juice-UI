@@ -4,3 +4,91 @@
 #notall{
     display: block;
 }
+.form-group{
+    padding-top: 12%;
+    align-content: center;
+    background-image: url("/src/assets/img/nature.png");
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+}
+.main{
+    /* background-image: url('/src/assets/img/nature.png'); */
+    
+}
+.drop-down{
+    /* color: #ffffff!important; */
+    border-color: #ed8b00;
+    /* border-radius: 10px; */
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* background-color: #ed8b00;
+    box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
+    font-weight: 500;
+    line-height: 1.7em !important; */
+}
+.form-control{
+    height: 40px;
+    width: 23%;
+    float: left;
+    display: inherit;
+    background: #fff;
+    border-radius: 0px;
+    color: #8f857b;
+    font-family: 'Satisfy', cursive;
+    font-weight: 500;
+}
+.drop-down-first{
+    border-right:1px solid #ed8b00 ; 
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.drop-down-second{
+    border-right:1px solid #ed8b00; 
+    border-left: none;
+}
+.drop-down-third{
+    border-right:1px solid #ed8b00; 
+    border-left: none;
+}
+.search{
+     color: #ffffff!important;
+     border-color: #ed8b00;
+     /* border-radius: 10px; */
+     font-size: 18px;
+     padding-left: 15px;
+     padding-right: 15px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     background-color: #ed8b00;
+     box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
+     line-height: 1.7em !important;
+     width: 15%;
+     height: 40px;
+     border-radius: 0%;
+     border-top-right-radius: 7px;
+     border-bottom-right-radius: 7px;
+     font-family: 'Satisfy', cursive;
+     font-weight: 500;
+}
+.heading-one{
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-family: 'Satisfy', cursive;
+    font-weight: 500;
+    color:#15570a;
+    text-align: center;
+}
+.table-order{
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-family: 'Satisfy', cursive;
+    font-weight: 500;
+    color:#15570a;
+    text-align: center;
+}

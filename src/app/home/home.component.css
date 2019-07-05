@@ -1,8 +1,9 @@
 .div-top{
     background-image: url("/src/assets/img/banner-fruit.jpg");
-    max-height: 150px;
-    height: 150px;
+    max-height: 200px;
+    height: 200px;
     text-align: center;
+    padding-top: 5%;
 }
 .button-orange{
     color: #ffffff!important;

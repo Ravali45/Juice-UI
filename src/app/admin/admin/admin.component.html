@@ -1,29 +1,18 @@
-
-<button class="btn btn -primary" style="cursor: pointer" (click)="navigate()">Home</button>
-
-<button class="btn btn -primary" style="cursor: pointer" (click)="navigateview()">View</button>
-
-<button class="btn btn -primary" style="cursor: pointer" (click)="navigateadd()">Add</button>
-
 <div class="form-group">
-    <div  class="col-md-2">
-        <select class="form-control" [(ngModel)]="this.selectedoption" name="selectedoption">
+  <div class="main">
+    <div class="col-md-2"></div>
+    <div  class="col-md-10">
+        <select class="form-control drop-down drop-down-first" [(ngModel)]="this.selectedoption" name="selectedoption">
         <option>All</option>
         <option  id="opt" *ngFor="let juice of this.juicedetails">{{juice.name}}</option>
         </select>
-    </div>
-    <div class="col-md-2">
-        <input type="date" name="bday" [(ngModel)]="this.fromdate" class="form-control">
+        <input type="date" name="bday" [(ngModel)]="this.fromdate" class="form-control drop-down drop-down-second">
         <!-- <input type="date" name="bday">
         <input type="submit"> -->
+        <input type="date" name="bday" [(ngModel)]="this.todate" class="form-control drop-down drop-down-third">
+        <button type="submit" (click)="search()" class="btn search">Search</button>
     </div>
-    <div class="col-md-2">
-        <input type="date" name="bday" [(ngModel)]="this.todate" class="form-control">
-    </div>
-    <div class="col-md-2">
-            <button type="submit" (click)="search()" class="btn btn-primary">Search</button>
-    </div>
-</div>
+  </div>
 
 <!-- <div *ngFor="let obj of this.searchedetails">
 <app-search [admin]="obj"></app-search>
@@ -31,9 +20,9 @@
 <!-- display juice details between dates -->
  <div class="container-fluid" id="notall" *ngIf="this.paropt!=-1 && this.paropt>0 ">
 
-    <div class="col-lg-12">
-    <h3 style="text-align: center;">Order Summery</h3>
-    <h4>Beverage Name : {{this.selectedoption}}</h4>
+    <div class="col-lg-12 ">
+    <h3 class="heading-one">Order Summery</h3>
+    <h4 class="table-order">Beverage Name : {{this.selectedoption}}</h4>
    
     </div>
     <table class="table" >
@@ -96,3 +85,4 @@
                 
           </table>
     </div>
+</div>

@@ -1,0 +1,45 @@
+.fluid-container{
+    padding-top: 10%;
+    align-content: center;
+    background-image: url("/src/assets/img/nature.png");
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    font-family: 'Satisfy', cursive;
+}
+.heading{
+    padding-bottom: 2%;
+    font-family: 'Satisfy', cursive;
+    font-weight: 600;
+    color:#15570a;
+    text-align: center;
+    font-size: 20px;
+}
+.form-control{
+    border-color: #ed8b00;
+}
+label{
+    font-size: 18px;
+}
+.submit{
+    color: #ffffff!important;
+    border-color: #ed8b00;
+    /* border-radius: 10px; */
+    font-size: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ed8b00;
+    box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
+    line-height: 1.7em !important;
+    width: 40%;
+    height: 40px;
+    border-radius: 7px;
+}
+.submit-row{
+    margin-top:4%;
+    text-align: center;
+}
